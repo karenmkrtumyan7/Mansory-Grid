@@ -7,8 +7,6 @@ import { uid } from 'uid';
 import { Container, Grid } from 'styles/common';
 import { useScreenResize } from 'hooks';
 
-console.log(12);
-
 interface ImageType {
   id: string;
   urls: {

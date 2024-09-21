@@ -5,7 +5,9 @@ import { masonryColumns } from 'helpers/masonry';
 import Card from 'components/Card';
 import { uid } from 'uid';
 import { Container, Grid } from 'styles/common';
-import { useScreenResize } from '../hooks';
+import { useScreenResize } from 'hooks';
+
+console.log(1);
 
 interface ImageType {
   id: string;

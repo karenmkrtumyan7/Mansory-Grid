@@ -3,4 +3,3 @@
 
 #npm test
 npx run lint
-prettier-eslint --write

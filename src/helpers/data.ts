@@ -1,6 +1,6 @@
-import { LayoutData } from 'types';
+import { ILayoutData } from 'types';
 
-const data: LayoutData = {
+const data: ILayoutData = {
   IMAGE_WIDTH_3COLUMNS: 416,
   IMAGE_WIDTH_2COLUMNS: 463,
   IMAGE_WIDTH_1COLUMN: 760,

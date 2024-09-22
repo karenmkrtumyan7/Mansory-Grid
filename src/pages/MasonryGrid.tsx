@@ -5,7 +5,7 @@ import { getPhotos, getSearch } from 'services/networkService';
 import data from 'helpers/data';
 import { Gallery, Header } from 'components';
 import { removeDuplicateImages } from 'helpers';
-import { ErrorStyled } from 'styles/common';
+import { ErrorStyled, Space } from 'styles/common';
 import { useInfiniteScroll } from 'hooks';
 
 const screenWidths: number[] = [
@@ -72,9 +72,9 @@ const MasonryGrid = () => {
           setSearchText(value);
         }}
       />
-      <div style={{ height: data.HEADER_HEIGHT * 1.5 }} />
+      <Space height={data.HEADER_HEIGHT * 1.5} />
       {errorMessage && <ErrorStyled>{errorMessage}</ErrorStyled>}
-      <div style={{ minHeight: errorMessage ? 100 : 1600 }}>
+      <Space $minHeight={errorMessage ? 100 : 1600}>
         <Gallery
           photosArray={photosArray}
           screenWidths={screenWidths}
@@ -83,8 +83,8 @@ const MasonryGrid = () => {
           rowGap={data.ROW_GAP}
           columnGap={data.COLUMN_GAP}
         />
-      </div>
-      <div style={{ height: 10 }} ref={infiniteLoadRef} />
+      </Space>
+      <Space height={10} ref={infiniteLoadRef} />
     </>
   );
 };

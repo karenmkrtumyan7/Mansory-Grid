@@ -7,24 +7,24 @@ interface CardWrapperProps {
 }
 
 const CardWrapper = styled.div<CardWrapperProps>`
-    position: relative;
-    height: ${(props) => props.height};
-    cursor: pointer;
-    margin-bottom: 24px;
+  position: relative;
+  height: ${(props) => props.height}px;
+  cursor: pointer;
+  margin-bottom: 24px;
 `;
 
 interface ImageProps {
-  imageWidth: number;
+  $imageWidth: number;
 }
 
 const Image = styled.img<ImageProps>`
-    max-width: ${(props) => props.imageWidth};
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 5;
-    width: 100%;
-    box-sizing: border-box;
+  max-width: ${(props) => props.$imageWidth}px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 5;
+  width: 100%;
+  box-sizing: border-box;
 `;
 
 const Details = styled.div`
@@ -91,12 +91,12 @@ const ImageWrapper = styled.div`
 `;
 
 interface BlurHashStyledProps {
-  imageWidth: number;
+  $imageWidth: number;
 }
 
 const BlurHashStyled = styled(Blurhash)<BlurHashStyledProps>`
   width: 100% !important;
-  max-width: ${(props) => props.imageWidth};
+  max-width: ${(props) => props.$imageWidth}px;
   position: absolute;
   left: 0;
   top: 0;
@@ -104,11 +104,17 @@ const BlurHashStyled = styled(Blurhash)<BlurHashStyledProps>`
   box-sizing: border-box;
 `;
 
-const ImageModal = styled.img`
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    overflow: hidden;
+interface ImageModalProps {
+  loading: number;
+}
+
+const ImageModal = styled.img<ImageModalProps>`
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  overflow: hidden;
+  visibility: ${(props) => (props.loading ? 'visible' : 'hidden')};
+  max-height: ${(props) => (props.loading ? 'none' : 0)};
 `;
 
 const DescriptionWrapper = styled.div`

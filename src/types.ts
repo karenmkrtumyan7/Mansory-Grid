@@ -20,7 +20,7 @@ export interface IImage {
   created_at: string,
 }
 
-export interface LayoutData {
+export interface ILayoutData {
   IMAGE_WIDTH_3COLUMNS: number;
   IMAGE_WIDTH_2COLUMNS: number;
   IMAGE_WIDTH_1COLUMN: number;
@@ -36,4 +36,13 @@ export interface LayoutData {
   HEADER_HEIGHT: number;
 
   FULL_MODAL_SCREEN_WIDTH: string;
+}
+
+export interface ApiEndpoints {
+  Photos: string;
+  Page: string;
+  PerPage: string;
+  Search: string;
+  OrderBy: string;
+  Query: string;
 }

@@ -37,7 +37,7 @@ const PhotoDetails: FC = () => {
   return (
     <Details>
       <CloseButton onClick={() => navigate('/')}>
-        <FontAwesomeIcon icon={faTimes} style={{ fontSize: '35px' }} />
+        <FontAwesomeIcon icon={faTimes} />
       </CloseButton>
       <ModalInner>
         <User image={image} />
@@ -55,11 +55,11 @@ const PhotoDetails: FC = () => {
           <ImageModal
             src={image?.urls?.full}
             onLoad={() => setLoading(true)}
-            style={loading ? {} : { display: 'none' }}
+            loading={loading ? 1 : 0}
           />
         </ImageWrapper>
         <DescriptionWrapper>
-          {image?.description && <ImageDescription>{image.description || 'No description available'}</ImageDescription>}
+          {image?.description && <ImageDescription>{image.description}</ImageDescription>}
           {image?.created_at && <ImageDate>{new Date(image.created_at).toLocaleDateString()}</ImageDate>}
         </DescriptionWrapper>
       </ModalInner>

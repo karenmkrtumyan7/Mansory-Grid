@@ -34,7 +34,7 @@ const Header: FC<HeaderProps> = ({ searchCallback }) => {
           }}
         >
           <SearchButton type="submit">
-            <FontAwesomeIcon icon={faSearch} style={{ fontSize: '15px' }} />
+            <FontAwesomeIcon icon={faSearch} />
           </SearchButton>
           <SearchInput
             placeholder="Search photos"

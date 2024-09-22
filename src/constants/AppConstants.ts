@@ -1,11 +1,4 @@
-interface ApiEndpoints {
-  Photos: string;
-  Page: string;
-  PerPage: string;
-  Search: string;
-  OrderBy: string;
-  Query: string;
-}
+import { ApiEndpoints } from 'types';
 
 const apiEndpoints: ApiEndpoints = {
   Photos: 'photos',

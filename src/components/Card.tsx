@@ -28,8 +28,8 @@ const Card: FC<CardProps> = ({ image, imageWidth }) => {
       {isVisible && (
         <Container>
           <Image
+            $imageWidth={imageWidth}
             src={`${image.urls.raw}&w=416`}
-            imageWidth={imageWidth}
             alt={image.description || image.alt_description}
           />
         </Container>
@@ -38,8 +38,8 @@ const Card: FC<CardProps> = ({ image, imageWidth }) => {
       <ErrorBoundary>
         {image.blur_hash !== null && (
           <BlurHashStyled
+            $imageWidth={imageWidth}
             hash={image.blur_hash}
-            imageWidth={imageWidth}
             height={imageHeight}
             resolutionX={32}
             resolutionY={32}

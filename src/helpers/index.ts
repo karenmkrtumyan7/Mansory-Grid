@@ -13,8 +13,3 @@ export const removeDuplicateImages = (prevPhotos: { id: string }[], nextPhotos?:
 export const getUserLink = (image: IImage): string => `${process.env.REACT_APP_BASE_URL}/@${image.user.username}`;
 
 export const textToQuery = (string: string): string => string.replace(/\W/g, '+');
-
-export const lazyImport = (path: string) => async () => {
-  const Component = await import(path);
-  return { Component: Component.default };
-};

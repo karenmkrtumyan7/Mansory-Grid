@@ -1,17 +1,25 @@
 import { createBrowserRouter } from 'react-router-dom';
-import { lazyImport } from 'helpers';
 
 export const allRoutes = createBrowserRouter([
   {
     path: '/',
-    lazy: lazyImport('pages/MasonryGrid'),
+    async lazy() {
+      const Component = await import('pages/MasonryGrid');
+      return { Component: Component.default };
+    },
   },
   {
     path: '/photos/:id',
-    lazy: lazyImport('pages/PhotoDetails'),
+    async lazy() {
+      const Component = await import('pages/PhotoDetails');
+      return { Component: Component.default };
+    },
   },
   {
     path: '*',
-    lazy: lazyImport('components/ErrorBoundary'),
+    async lazy() {
+      const Component = await import('components/ErrorBoundary');
+      return { Component: Component.default };
+    },
   },
 ]);

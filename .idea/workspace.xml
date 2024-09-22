@@ -5,32 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="aec15f1c-fca1-4d48-9567-5409f2710ac8" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/pages/MasonryGrid.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/PhotoDetails.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/routes/index.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/types.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.eslintrc.js" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintrc.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Avatar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/User.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Card.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Card.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Gallery.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Gallery.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Modal.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/contexts/ModalContext.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/helpers/data.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/helpers/data.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/helpers/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/helpers/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/helpers/masonry.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/helpers/masonry.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/hooks/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/hooks/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/hooks/useClickOutside.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/hooks/useInfiniteScroll.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/hooks/useInfiniteScroll.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/services/networkService.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/networkService.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styles/Avatar.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/User.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styles/Card.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/Card.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styles/Header.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/Header.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/PhotoDetails.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/PhotoDetails.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/routes/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/index.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -117,7 +95,7 @@
       <workItem from="1726891572350" duration="20977000" />
       <workItem from="1726917977264" duration="2178000" />
       <workItem from="1726920673138" duration="21605000" />
-      <workItem from="1726984538695" duration="24644000" />
+      <workItem from="1726984538695" duration="26715000" />
     </task>
     <servers />
   </component>

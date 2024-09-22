@@ -3,7 +3,6 @@ import {
 } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTimes } from '@fortawesome/free-solid-svg-icons';
-import User from '../components/User';
 import {
   CloseButton,
   ImageModal,
@@ -15,6 +14,7 @@ import { getPhoto } from 'services/networkService';
 import { useParams, useNavigate } from 'react-router-dom';
 import { IImage } from 'types';
 import { Blurhash } from 'react-blurhash';
+import User from 'components/User';
 
 const PhotoDetails: FC = () => {
   const { id } = useParams();

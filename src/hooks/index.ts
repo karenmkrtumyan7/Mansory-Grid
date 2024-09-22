@@ -1,11 +1,9 @@
-import { useImageLazyLoad } from './useImageLazyLoad';
-import { useInfiniteScroll } from './useInfiniteScroll';
-import { useScreenResize } from './useScreenResize';
-import { useClickOutside } from './useClickOutside';
+import { useImageLazyLoad } from 'hooks/useImageLazyLoad';
+import { useInfiniteScroll } from 'hooks/useInfiniteScroll';
+import { useScreenResize } from 'hooks/useScreenResize';
 
 export {
   useImageLazyLoad,
   useInfiniteScroll,
   useScreenResize,
-  useClickOutside,
 };

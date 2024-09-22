@@ -11,18 +11,18 @@ const LinkStyle = styled.a`
     outline: none;
 `;
 
-const CreditsDivHeader = styled.div`
+const UserWrapper = styled.div`
     ${creditsDiv}; 
     width: auto;
     padding: 10px;
 `;
 
-const CreditsNamesDiv = styled.div`
+const UserNameWrapper = styled.div`
     display: flex;
     flex-direction: column;
 `;
 
-const CreditsPhoto = styled.img`
+const Avatar = styled.img`
     border-radius: 50%;
     margin: 0 10px;
 `;
@@ -32,7 +32,7 @@ const creditsName = css`
     font-weight: 600;
 `;
 
-const CreditsName = styled.div`
+const UserName = styled.div`
     ${creditsName};
     color: black;
 `;
@@ -51,9 +51,9 @@ const UserTag = styled.span`
 
 export {
   LinkStyle,
-  CreditsDivHeader,
-  CreditsNamesDiv,
-  CreditsPhoto,
-  CreditsName,
+  UserWrapper,
+  UserNameWrapper,
+  Avatar,
+  UserName,
   UserTag,
 };

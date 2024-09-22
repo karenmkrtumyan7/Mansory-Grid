@@ -9,16 +9,16 @@ interface CardWrapperProps {
 const CardWrapper = styled.div<CardWrapperProps>`
     position: relative;
     height: ${(props) => props.height};
-    cursor: zoom-in;
+    cursor: pointer;
     margin-bottom: 24px;
 `;
 
 interface ImageProps {
-  imagewidth: number;
+  imageWidth: number;
 }
 
 const Image = styled.img<ImageProps>`
-    max-width: ${(props) => props.imagewidth};
+    max-width: ${(props) => props.imageWidth};
     position: absolute;
     top: 0;
     left: 0;
@@ -27,7 +27,7 @@ const Image = styled.img<ImageProps>`
     box-sizing: border-box;
 `;
 
-const ModalOuter = styled.div`
+const Details = styled.div`
   width: 100vw;
   position: fixed;
   top: 0;
@@ -39,7 +39,6 @@ const ModalOuter = styled.div`
   display: flex;
   justify-content: center;
   background-color: rgba(0, 0, 0, 0.6);
-  cursor: zoom-out;
 `;
 
 const ModalInner = styled.div`
@@ -83,50 +82,61 @@ const CloseButton = styled.button`
   }
 `;
 
-const ImageZoomedOut = styled.div`
+const ImageWrapper = styled.div`
   padding: 0 16px;
   margin: 0 auto;
   text-align: center;
-`;
-
-const ImageZoomedIn = styled.div`
-  margin: 0;
-  overflow: hidden;
-  height: auto;
+  width: 80%;
+  height: 80%;
 `;
 
 interface BlurHashStyledProps {
-  imagewidth: number;
+  imageWidth: number;
 }
 
 const BlurHashStyled = styled(Blurhash)<BlurHashStyledProps>`
-    width: 100% !important;
-    max-width: ${(props) => props.imagewidth};
-    position: absolute;
-    left: 0;
-    top: 0;
-    z-index: 2;
-    box-sizing: border-box;
+  width: 100% !important;
+  max-width: ${(props) => props.imageWidth};
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 2;
+  box-sizing: border-box;
 `;
 
-interface ImageModalProps {
-  large: number;
-}
+const ImageModal = styled.img`
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    overflow: hidden;
+`;
 
-const ImageModal = styled.img<ImageModalProps>`
-    max-width: ${(props) => (props.large ? '100%' : 'none')};
-    max-height: ${(props) => (props.large ? 'none' : '80vh')};
-    cursor: ${(props) => (props.large ? 'zoom-in' : 'zoom-out')};
+const DescriptionWrapper = styled.div`
+  margin-top: 15px;
+  text-align: center;
+`;
+
+const ImageDescription = styled.p`
+  font-size: 18px;
+  color: #555;
+  margin-bottom: 10px;
+`;
+
+const ImageDate = styled.p`
+  font-size: 14px;
+  color: #888;
 `;
 
 export {
-  ModalOuter,
+  Details,
   ModalInner,
   CloseButton,
-  ImageZoomedOut,
-  ImageZoomedIn,
+  ImageWrapper,
   CardWrapper,
   Image,
   ImageModal,
   BlurHashStyled,
+  DescriptionWrapper,
+  ImageDescription,
+  ImageDate,
 };

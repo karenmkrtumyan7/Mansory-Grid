@@ -1,26 +1,14 @@
 import {
   useState, useRef, useEffect, FC,
 } from 'react';
+import { IImage } from 'types';
 import { masonryColumns } from 'helpers/masonry';
-import Card from 'components/Card';
-import { uid } from 'uid';
 import { Container, Grid } from 'styles/common';
 import { useScreenResize } from 'hooks';
-
-interface ImageType {
-  id: string;
-  urls: {
-    raw: string;
-  };
-  description?: string;
-  alt_description?: string;
-  blur_hash?: string | null;
-  width: number;
-  height: number;
-}
+import Card from 'components/Card';
 
 interface GalleryProps {
-  photosArray: ImageType[];
+  photosArray: IImage[];
   rowGap: number;
   columnGap: number;
   minColumns: number;
@@ -43,7 +31,7 @@ const Gallery: FC<GalleryProps> = ({
   const [currentImageWidth, setCurrentImageWidth] = useState(
     imageWidths[imageWidths.length - 1],
   );
-  const [columns, setColumns] = useState<ImageType[][]>([[]]);
+  const [columns, setColumns] = useState<IImage[][]>([[]]);
   const [numberOfColumns, setNumberOfColumns] = useState(imageWidths.length - 1);
 
   const gridRef = useRef<HTMLDivElement>(null);
@@ -90,10 +78,10 @@ const Gallery: FC<GalleryProps> = ({
 
   return (
     <Grid ref={gridRef}>
-      {columns.map((column, is) => (
-        <Container key={uid()}>
+      {columns.map((column, index) => (
+        <Container key={index}>
           {column.map((image) => (
-            <Card key={image.id} image={image} imagewidth={currentImageWidth} />
+            <Card key={image.id} image={image} imageWidth={currentImageWidth} />
           ))}
         </Container>
       ))}

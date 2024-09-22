@@ -1,11 +1,4 @@
-export function createModal(divId: string): void {
-  const checkElement = document.getElementById(divId);
-  if (!checkElement) {
-    const element = document.createElement('div');
-    element.setAttribute('id', divId);
-    document.body.appendChild(element);
-  }
-}
+import { IImage } from 'types';
 
 export const removeDuplicateImages = (prevPhotos: { id: string }[], nextPhotos?: { id: string }[]): { id: string }[] => {
   if (!nextPhotos) {
@@ -17,6 +10,11 @@ export const removeDuplicateImages = (prevPhotos: { id: string }[], nextPhotos?:
   return [...prevPhotos, ...filteredPhotos];
 };
 
-export const getUserLink = (image: { user: { username: string } }): string => `${process.env.REACT_APP_API_URL}/@${image.user.username}`;
+export const getUserLink = (image: IImage): string => `${process.env.REACT_APP_BASE_URL}/@${image.user.username}`;
 
 export const textToQuery = (string: string): string => string.replace(/\W/g, '+');
+
+export const lazyImport = (path: string) => async () => {
+  const Component = await import(path);
+  return { Component: Component.default };
+};

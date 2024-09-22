@@ -1,64 +1,54 @@
 import { resizedHeight } from 'helpers/masonry';
-import { Blurhash } from 'react-blurhash';
+import {
+  FC, RefObject, useMemo,
+} from 'react';
+import { Container } from 'styles/common';
+import { BlurHashStyled, CardWrapper, Image } from 'styles/Card';
+import ErrorBoundary from 'components/ErrorBoundary';
+import { useImageLazyLoad } from 'hooks';
+import { useNavigate } from 'react-router-dom';
+import { IImage } from 'types';
 
-import { useContext } from 'react';
-import ErrorBoundary from './ErrorBoundary';
-import { ModalContext } from '../contexts/ModalContext';
-import { useImageLazyLoad } from '../hooks';
+interface CardProps {
+  image: IImage;
+  imageWidth: number;
+}
 
-export function Card({ image, imagewidth }) {
+const Card: FC<CardProps> = ({ image, imageWidth }) => {
   const [isVisible, imageRef] = useImageLazyLoad();
-  const modal = useContext(ModalContext);
+  const navigate = useNavigate();
+  const imageHeight = useMemo(() => resizedHeight(image.width, image.height, imageWidth), [image.height, image.width, imageWidth]);
 
   return (
-    <div
-      className="image"
-      ref={imageRef}
-      style={{
-        position: 'relative',
-        height: resizedHeight(image.width, image.height, imagewidth),
-        cursor: 'zoom-in',
-      }}
-      onClick={() => {
-        modal.showImage(image);
-      }}
+    <CardWrapper
+      ref={imageRef as RefObject<HTMLDivElement>}
+      height={imageHeight}
+      onClick={() => navigate(`photos/${image.id}`)}
     >
       {isVisible && (
-        <img
-          src={`${image.urls.raw}&w=416`}
-          className="unsplashImage"
-          style={{
-            maxWidth: imagewidth,
-            position: 'absolute',
-            top: 0,
-            left: 0,
-            zIndex: 5,
-          }}
-          alt={image.description || image.alt_description}
-        />
+        <Container>
+          <Image
+            src={`${image.urls.raw}&w=416`}
+            imageWidth={imageWidth}
+            alt={image.description || image.alt_description}
+          />
+        </Container>
       )}
 
       <ErrorBoundary>
         {image.blur_hash !== null && (
-          <Blurhash
-            alt={image.description || image.alt_description}
+          <BlurHashStyled
             hash={image.blur_hash}
-            className="unsplashImage blurHash"
-            style={{
-              width: '100%',
-              maxWidth: imagewidth,
-              position: 'absolute',
-              left: 0,
-              top: 0,
-              zIndex: 2,
-            }}
-            height={resizedHeight(image.width, image.height, imagewidth)}
+            imageWidth={imageWidth}
+            height={imageHeight}
             resolutionX={32}
             resolutionY={32}
             punch={1}
           />
         )}
       </ErrorBoundary>
-    </div>
+    </CardWrapper>
   );
-}
+};
+
+export default Card;

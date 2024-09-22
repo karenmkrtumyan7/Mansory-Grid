@@ -1,32 +1,20 @@
-interface ImageType {
-  id: string;
-  urls: {
-    raw: string;
-  };
-  description?: string;
-  alt_description?: string;
-  blur_hash?: string | null;
-  width: number;
-  height: number;
-}
+import { IImage } from 'types';
 
-export function resizedHeight(width: number, height: number, newWidth: number): number {
-  return (newWidth / width) * height;
-}
+export const resizedHeight = (width: number, height: number, newWidth: number): number => (newWidth / width) * height;
 
-function shortestColumnDifference(columns: number[]): number {
+export const shortestColumnDifference = (columns: number[]): number => {
   const min = Math.min(...columns);
   return columns.findIndex((val) => val === min);
-}
+};
 
-export function masonryColumns(
-  photosArray: ImageType[],
+export const masonryColumns = (
+  photosArray: IImage[],
   numberOfColumns: number,
   IMAGE_WIDTH: number,
-): ImageType[][] {
+): IImage[][] => {
   if (!photosArray.length) return Array.from(Array(numberOfColumns), () => []);
 
-  const allColumns: ImageType[][] = Array.from(Array(numberOfColumns), () => []);
+  const allColumns: IImage[][] = Array.from(Array(numberOfColumns), () => []);
   const HeightsArray: number[] = Array(numberOfColumns).fill(0);
 
   photosArray.forEach((currentImage) => {
@@ -38,4 +26,4 @@ export function masonryColumns(
   });
 
   return allColumns;
-}
+};

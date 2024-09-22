@@ -5,15 +5,32 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="aec15f1c-fca1-4d48-9567-5409f2710ac8" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.husky/pre-commit" beforeDir="false" afterPath="$PROJECT_DIR$/.husky/pre-commit" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/MasonryGrid.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/PhotoDetails.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/routes/index.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/types.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.eslintrc.js" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintrc.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Avatar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Avatar.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Avatar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/User.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Card.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Card.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Gallery.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Gallery.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Modal.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Modal.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Modal.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/contexts/ModalContext.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/helpers/data.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/helpers/data.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/helpers/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/helpers/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/helpers/masonry.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/helpers/masonry.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/hooks/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/hooks/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/hooks/useClickOutside.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/hooks/useInfiniteScroll.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/hooks/useInfiniteScroll.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/services/networkService.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/networkService.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/styles/Avatar.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/User.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/styles/Card.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/Card.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/styles/Header.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/Header.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,6 +40,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="CSS File" />
         <option value="JavaScript File" />
       </list>
     </option>
@@ -42,33 +60,35 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "main",
-    "last_opened_file_path": "C:/Users/karen/WebstormProjects/Task",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.standard": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.standard": "",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "settings.javascript.linters.eslint",
-    "ts.external.directory.path": "C:\\Users\\karen\\WebstormProjects\\Task\\node_modules\\typescript\\lib",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/karen/WebstormProjects/Task&quot;,
+    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.standard&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.standard&quot;: &quot;&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;settings.javascript.linters.eslint&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;C:\\Users\\karen\\WebstormProjects\\Task\\node_modules\\typescript\\lib&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\karen\WebstormProjects\Task" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\karen\WebstormProjects\Task\src\components" />
+      <recent name="C:\Users\karen\WebstormProjects\Task\src\components\MasonryGrid" />
+      <recent name="C:\Users\karen\WebstormProjects\Task\src\pages" />
       <recent name="C:\Users\karen\WebstormProjects\Task\src\contexts" />
       <recent name="C:\Users\karen\WebstormProjects\Task\src\styles" />
-      <recent name="C:\Users\karen\WebstormProjects\Task\src\hooks" />
-      <recent name="C:\Users\karen\WebstormProjects\Task\src\services" />
     </key>
   </component>
   <component name="SharedIndexes">
@@ -96,7 +116,8 @@
       <workItem from="1726857730439" duration="6135000" />
       <workItem from="1726891572350" duration="20977000" />
       <workItem from="1726917977264" duration="2178000" />
-      <workItem from="1726920673138" duration="13933000" />
+      <workItem from="1726920673138" duration="21605000" />
+      <workItem from="1726984538695" duration="24644000" />
     </task>
     <servers />
   </component>

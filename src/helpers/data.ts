@@ -1,20 +1,4 @@
-interface LayoutData {
-  IMAGE_WIDTH_3COLUMNS: number;
-  IMAGE_WIDTH_2COLUMNS: number;
-  IMAGE_WIDTH_1COLUMN: number;
-
-  COLUMN_HEIGHT: number;
-  ROW_GAP: number;
-  COLUMN_GAP: number;
-
-  SCREEN_WIDTH_3COLUMNS: number;
-  SCREEN_WIDTH_2COLUMNS: number;
-  SCREEN_WIDTH_1COLUMN: number;
-
-  HEADER_HEIGHT: number;
-
-  FULL_MODAL_SCREEN_WIDTH: string;
-}
+import { LayoutData } from 'types';
 
 const data: LayoutData = {
   IMAGE_WIDTH_3COLUMNS: 416,

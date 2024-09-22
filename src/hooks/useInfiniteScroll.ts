@@ -20,7 +20,6 @@ export const useInfiniteScroll = (
 
       intersectionObserver.observe(node);
 
-      // Clean up
       return () => {
         intersectionObserver.unobserve(node);
       };

@@ -51,7 +51,17 @@ const getSearch = async (page: number, query: string, order: string = 'relevant'
   }
 };
 
+const getPhoto = async (photoId: string): Promise<any> => {
+  try {
+    const response = await NetworkService.get(`/${Photos}/${photoId}`);
+    return response.data;
+  } catch (err) {
+    return {};
+  }
+};
+
 export {
   getPhotos,
+  getPhoto,
   getSearch,
 };

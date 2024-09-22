@@ -21,9 +21,9 @@ module.exports = {
   plugins: ['react', 'jsx-a11y', 'import', 'react-hooks'],
   settings: {
     'import/resolver': {
-      typescript: {},
       node: {
-        moduleDirectory: ['node_modules', 'src'],
+        paths: ['src'],
+        extensions: ['.js', '.jsx', '.ts', '.tsx'],
       },
     },
   },
@@ -100,11 +100,11 @@ module.exports = {
     'prefer-promise-reject-errors': 0,
     'react-hooks/exhaustive-deps': 'warn',
     'react-hooks/rules-of-hooks': 'error',
-    // 'import/no-extraneous-dependencies': ['error', { devDependencies: true }],
     'react/prop-types': 'off',
     'react/ state-in-constructor': 'off',
     'react/require-default-props': 'off',
     'react/state-in-constructor': 'off',
+    'react/no-array-index-key': 'off',
     camelcase: 0,
     'import/no-extraneous-dependencies': 'off',
     'import/extensions': [

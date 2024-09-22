@@ -14,7 +14,7 @@ import { getPhoto } from 'services/networkService';
 import { useParams, useNavigate } from 'react-router-dom';
 import { IImage } from 'types';
 import { Blurhash } from 'react-blurhash';
-import User from 'components/User';
+import { User } from 'components';
 
 const PhotoDetails: FC = () => {
   const { id } = useParams();

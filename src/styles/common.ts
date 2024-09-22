@@ -1,10 +1,13 @@
 import styled from 'styled-components';
 
-const ErrorStyled = styled.div`
-  width: 100vw;
-  height: 15vh;
+const Center = styled.div`
   display: flex;
   justify-content: center;
+`;
+
+const ErrorStyled = styled(Center)`
+  width: 100vw;
+  height: 15vh;
   align-items: center;
   font-size: 32px;
   font-weight: 300;
@@ -37,6 +40,7 @@ const Space = styled.div<SpaceProps>`
 `;
 
 export {
+  Center,
   ErrorStyled,
   Container,
   Grid,

@@ -6,11 +6,11 @@ This project is a frontend application built with React, aimed at displaying ima
 
 ### `npm start`
 
-Runs the app in development mode.\
+Runs the app in development mode.
 
 ### `npm test`
 
-Launches the test runner in interactive watch mode.\
+Launches the test runner in interactive watch mode.
 
 ### `npm run build`
 
@@ -24,7 +24,7 @@ Analyzes the bundle size for optimization.
 
 1. **Image Rendering Optimization**: The project uses `react-blurhash` to optimize image rendering. This ensures users see a blurred version of the image while the full image is loading, providing a smooth experience, especially when dealing with many images.
 
-2. **State Management and Routing**: Initially, I implemented the `photoDetails` component as a modal to maintain the grid state. However, the task required using `react-router`, so I refactored it into a separate page to meet the specifications.
+2. **State Management and Routing**: Initially, I implemented the `PhotoDetails` component as a modal to maintain the grid state. However, the task required using `react-router-dom`, so I refactored it into a separate page to meet the specifications.
 
 ---
 

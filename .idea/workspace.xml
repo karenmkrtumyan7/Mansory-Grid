@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="AutoImportSettings">
-    <option name="autoReloadType" value="SELECTIVE" />
-  </component>
   <component name="ChangeListManager">
-    <list default="true" id="aec15f1c-fca1-4d48-9567-5409f2710ac8" name="Changes" comment="">
+    <list default="true" id="7e5fa1c6-9072-48e2-9ac7-3b247df6a4af" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
@@ -13,60 +12,28 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="FileTemplateManagerImpl">
-    <option name="RECENT_TEMPLATES">
-      <list>
-        <option value="CSS File" />
-        <option value="JavaScript File" />
-      </list>
-    </option>
-  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProblemsViewState">
-    <option name="selectedTabId" value="CurrentFile" />
-  </component>
-  <component name="ProjectColorInfo">{
-  &quot;customColor&quot;: &quot;&quot;,
-  &quot;associatedIndex&quot;: 3
-}</component>
-  <component name="ProjectId" id="2mIeQUJJOAb2X7aX95B5GIGF0Qt" />
+  <component name="ProjectColorInfo"><![CDATA[{
+  "customColor": "",
+  "associatedIndex": 3
+}]]></component>
+  <component name="ProjectId" id="2mU1jGSSvQxlM1hAtjDtWAtvAG6" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
-    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "main",
-    "last_opened_file_path": "C:/Users/karen/WebstormProjects/Task",
-    "list.type.of.created.stylesheet": "CSS",
     "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.standard": "true",
-    "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.standard": "",
-    "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "configurable.tailwindcss",
-    "ts.external.directory.path": "C:\\Users\\karen\\WebstormProjects\\Task\\node_modules\\typescript\\lib",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
-  <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\karen\WebstormProjects\Task" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\karen\WebstormProjects\Task\public" />
-      <recent name="C:\Users\karen\WebstormProjects\Task\src\components" />
-      <recent name="C:\Users\karen\WebstormProjects\Task\src\components\MasonryGrid" />
-      <recent name="C:\Users\karen\WebstormProjects\Task\src\pages" />
-      <recent name="C:\Users\karen\WebstormProjects\Task\src\contexts" />
-    </key>
-  </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
@@ -77,25 +44,12 @@
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="aec15f1c-fca1-4d48-9567-5409f2710ac8" name="Changes" comment="" />
-      <created>1726768503337</created>
+      <changelist id="7e5fa1c6-9072-48e2-9ac7-3b247df6a4af" name="Changes" comment="" />
+      <created>1727116474742</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1726768503337</updated>
-      <workItem from="1726768505461" duration="929000" />
-      <workItem from="1726769455302" duration="1598000" />
-      <workItem from="1726822399824" duration="13000" />
-      <workItem from="1726823669090" duration="10500000" />
-      <workItem from="1726837443356" duration="456000" />
-      <workItem from="1726837993780" duration="6044000" />
-      <workItem from="1726844262721" duration="5453000" />
-      <workItem from="1726857730439" duration="6135000" />
-      <workItem from="1726891572350" duration="20977000" />
-      <workItem from="1726917977264" duration="2178000" />
-      <workItem from="1726920673138" duration="21605000" />
-      <workItem from="1726984538695" duration="36419000" />
-      <workItem from="1727072427054" duration="16535000" />
-      <workItem from="1727101744701" duration="1752000" />
+      <updated>1727116474742</updated>
+      <workItem from="1727116476286" duration="66000" />
     </task>
     <servers />
   </component>

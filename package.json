@@ -30,6 +30,7 @@
     "react-router-dom": "^6.26.2",
     "react-scripts": "5.0.1",
     "short-uuid": "^5.2.0",
+    "source-map-explorer": "^2.5.3",
     "styled-components": "^6.1.13",
     "typescript": "^4.9.5",
     "typescript-eslint": "^8.4.0",
@@ -48,7 +49,8 @@
     "eject": "react-scripts eject",
     "lint": "eslint src/**/*.{js,jsx,ts,tsx} --fix",
     "prepare": "husky install",
-    "format": "prettier src/**/*.{js,jsx,ts,tsx} --write"
+    "format": "prettier src/**/*.{js,jsx,ts,tsx} --write",
+    "analyze": "source-map-explorer 'build/static/js/*.js'"
   },
   "eslintConfig": {
     "extends": [

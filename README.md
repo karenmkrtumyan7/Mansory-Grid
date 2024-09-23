@@ -1,46 +1,31 @@
-# Getting Started with Create React App
+# Project Description
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project is a frontend application built with React, aimed at displaying images with optimized rendering and smooth navigation.
 
-## Available Scripts
-
-In the project directory, you can run:
+## Running the Project
 
 ### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+Runs the app in development mode.\
 
 ### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Launches the test runner in interactive watch mode.\
 
 ### `npm run build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Builds the app for production into the `build` folder.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### `npm run analyze`
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Analyzes the bundle size for optimization.
 
-### `npm run eject`
+## Design Decisions
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+1. **Image Rendering Optimization**: The project uses `react-blurhash` to optimize image rendering. This ensures users see a blurred version of the image while the full image is loading, providing a smooth experience, especially when dealing with many images.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+2. **State Management and Routing**: Initially, I implemented the `photoDetails` component as a modal to maintain the grid state. However, the task required using `react-router`, so I refactored it into a separate page to meet the specifications.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+---
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+It was a joy working on this project! I aimed for a balance of performance, usability, and clean design. I hope you find it as enjoyable to explore as I did to build! 🚀

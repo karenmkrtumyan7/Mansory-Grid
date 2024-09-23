@@ -4,9 +4,7 @@ export const removeDuplicateImages = (prevPhotos: { id: string }[], nextPhotos?:
   if (!nextPhotos) {
     return [];
   }
-  const filteredPhotos = nextPhotos.filter(
-    (current) => !prevPhotos.some((checkPhoto) => checkPhoto.id === current.id),
-  );
+  const filteredPhotos = nextPhotos.filter((current) => !prevPhotos.some((checkPhoto) => checkPhoto.id === current.id));
   return [...prevPhotos, ...filteredPhotos];
 };
 

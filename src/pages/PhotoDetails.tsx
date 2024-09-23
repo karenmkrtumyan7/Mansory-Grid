@@ -1,14 +1,8 @@
-import {
-  FC, useEffect, useState,
-} from 'react';
+import { FC, useEffect, useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTimes } from '@fortawesome/free-solid-svg-icons';
 import {
-  CloseButton,
-  ImageModal,
-  ImageWrapper,
-  ModalInner,
-  Details, DescriptionWrapper, ImageDescription, ImageDate,
+  CloseButton, ImageModal, ImageWrapper, ModalInner, Details, DescriptionWrapper, ImageDescription, ImageDate,
 } from 'styles/Card';
 import { getPhoto } from 'services/networkService';
 import { useParams, useNavigate } from 'react-router-dom';
@@ -27,9 +21,9 @@ const PhotoDetails: FC = () => {
       getPhoto(id)
         .then((data) => {
           setImage(data);
-        }).catch(() => {
+        })
+        .catch(() => {
           navigate('/404');
-        }).finally(() => {
         });
     }
   }, [id, navigate]);
@@ -42,21 +36,8 @@ const PhotoDetails: FC = () => {
       <ModalInner>
         <User image={image} />
         <ImageWrapper>
-          {!loading && image?.blur_hash && (
-            <Blurhash
-              hash={image.blur_hash}
-              width="100%"
-              height="100%"
-              resolutionX={32}
-              resolutionY={32}
-              punch={1}
-            />
-          )}
-          <ImageModal
-            src={image?.urls?.full}
-            onLoad={() => setLoading(true)}
-            loading={loading ? 1 : 0}
-          />
+          {!loading && image?.blur_hash && <Blurhash hash={image.blur_hash} width="100%" height="100%" resolutionX={32} resolutionY={32} punch={1} />}
+          <ImageModal src={image?.urls?.full} onLoad={() => setLoading(true)} loading={loading ? 1 : 0} />
         </ImageWrapper>
         <DescriptionWrapper>
           {image?.description && <ImageDescription>{image.description}</ImageDescription>}

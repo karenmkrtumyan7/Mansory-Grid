@@ -1,7 +1,5 @@
 import { GlobalStyle } from 'styles/Global';
-import {
-  RouterProvider,
-} from 'react-router-dom';
+import { RouterProvider } from 'react-router-dom';
 import { allRoutes } from 'routes';
 import ErrorBoundary from 'components/ErrorBoundary';
 

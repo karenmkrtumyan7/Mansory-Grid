@@ -7,11 +7,7 @@ export const shortestColumnDifference = (columns: number[]): number => {
   return columns.findIndex((val) => val === min);
 };
 
-export const masonryColumns = (
-  photosArray: IImage[],
-  numberOfColumns: number,
-  IMAGE_WIDTH: number,
-): IImage[][] => {
+export const masonryColumns = (photosArray: IImage[], numberOfColumns: number, IMAGE_WIDTH: number): IImage[][] => {
   if (!photosArray.length) return Array.from(Array(numberOfColumns), () => []);
 
   const allColumns: IImage[][] = Array.from(Array(numberOfColumns), () => []);

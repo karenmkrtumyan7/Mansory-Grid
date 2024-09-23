@@ -8,17 +8,9 @@ import { removeDuplicateImages } from 'helpers';
 import { ErrorStyled, Space } from 'styles/common';
 import { useInfiniteScroll } from 'hooks';
 
-const screenWidths: number[] = [
-  data.SCREEN_WIDTH_1COLUMN,
-  data.SCREEN_WIDTH_2COLUMNS,
-  data.SCREEN_WIDTH_3COLUMNS,
-];
+const screenWidths: number[] = [data.SCREEN_WIDTH_1COLUMN, data.SCREEN_WIDTH_2COLUMNS, data.SCREEN_WIDTH_3COLUMNS];
 
-const imageWidths: number[] = [
-  data.IMAGE_WIDTH_1COLUMN,
-  data.IMAGE_WIDTH_2COLUMNS,
-  data.IMAGE_WIDTH_3COLUMNS,
-];
+const imageWidths: number[] = [data.IMAGE_WIDTH_1COLUMN, data.IMAGE_WIDTH_2COLUMNS, data.IMAGE_WIDTH_3COLUMNS];
 
 const MasonryGrid = () => {
   const fetching = useRef(true);
@@ -75,14 +67,7 @@ const MasonryGrid = () => {
       <Space height={data.HEADER_HEIGHT * 1.5} />
       {errorMessage && <ErrorStyled>{errorMessage}</ErrorStyled>}
       <Space $minHeight={errorMessage ? 100 : 1600}>
-        <Gallery
-          photosArray={photosArray}
-          screenWidths={screenWidths}
-          imageWidths={imageWidths}
-          minColumns={1}
-          rowGap={data.ROW_GAP}
-          columnGap={data.COLUMN_GAP}
-        />
+        <Gallery photosArray={photosArray} screenWidths={screenWidths} imageWidths={imageWidths} minColumns={1} rowGap={data.ROW_GAP} columnGap={data.COLUMN_GAP} />
       </Space>
       <Space height={10} ref={infiniteLoadRef} />
     </>

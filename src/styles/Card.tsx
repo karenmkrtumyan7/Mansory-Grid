@@ -134,15 +134,5 @@ const ImageDate = styled.p`
 `;
 
 export {
-  Details,
-  ModalInner,
-  CloseButton,
-  ImageWrapper,
-  CardWrapper,
-  Image,
-  ImageModal,
-  BlurHashStyled,
-  DescriptionWrapper,
-  ImageDescription,
-  ImageDate,
+  Details, ModalInner, CloseButton, ImageWrapper, CardWrapper, Image, ImageModal, BlurHashStyled, DescriptionWrapper, ImageDescription, ImageDate,
 };

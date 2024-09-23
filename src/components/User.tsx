@@ -1,12 +1,7 @@
 import { getUserLink } from 'helpers';
 import { FC } from 'react';
 import {
-  Avatar,
-  UserName,
-  UserWrapper,
-  UserNameWrapper,
-  UserTag,
-  LinkStyle,
+  Avatar, UserName, UserWrapper, UserNameWrapper, UserTag, LinkStyle,
 } from 'styles/User';
 import { IImage } from 'types';
 
@@ -23,18 +18,13 @@ const User: FC<UserProps> = ({ image }) => {
   return image ? (
     <div>
       <UserWrapper>
-        <LinkStyle href={portfolioLink} target="_blank">
-          <Avatar
-            src={profile_image?.small}
-            alt="Photographer profile picture"
-          />
+        <LinkStyle role="link" href={portfolioLink} target="_blank">
+          <Avatar src={profile_image?.small} alt="Photographer profile picture" />
         </LinkStyle>
 
-        <LinkStyle href={portfolioLink} target="_blank">
+        <LinkStyle role="link" href={portfolioLink} target="_blank">
           <UserNameWrapper>
-            <UserName>
-              {`${first_name} ${last_name || ''}`}
-            </UserName>
+            <UserName>{`${first_name} ${last_name || ''}`}</UserName>
             <UserTag>{`@${username}`}</UserTag>
           </UserNameWrapper>
         </LinkStyle>

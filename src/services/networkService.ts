@@ -6,12 +6,7 @@ const accessKey = process.env.REACT_APP_ACCESS_KEY as string;
 const endpoint = process.env.REACT_APP_API_URL as string;
 
 const {
-  Photos,
-  Page,
-  PerPage,
-  Search,
-  OrderBy,
-  Query,
+  Photos, Page, PerPage, Search, OrderBy, Query,
 } = AppConstants.api;
 
 const NetworkService = axios.create({
@@ -60,8 +55,4 @@ const getPhoto = async (photoId: string): Promise<any> => {
   }
 };
 
-export {
-  getPhotos,
-  getPhoto,
-  getSearch,
-};
+export { getPhotos, getPhoto, getSearch };

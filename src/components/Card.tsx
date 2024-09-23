@@ -1,7 +1,5 @@
 import { resizedHeight } from 'helpers/masonry';
-import {
-  FC, RefObject, useMemo,
-} from 'react';
+import { FC, RefObject, useMemo } from 'react';
 import { Container } from 'styles/common';
 import { BlurHashStyled, CardWrapper, Image } from 'styles/Card';
 import ErrorBoundary from 'components/ErrorBoundary';
@@ -20,32 +18,15 @@ const Card: FC<CardProps> = ({ image, imageWidth }) => {
   const imageHeight = useMemo(() => resizedHeight(image.width, image.height, imageWidth), [image.height, image.width, imageWidth]);
 
   return (
-    <CardWrapper
-      ref={imageRef as RefObject<HTMLDivElement>}
-      height={imageHeight}
-      onClick={() => navigate(`photos/${image.id}`)}
-    >
+    <CardWrapper ref={imageRef as RefObject<HTMLDivElement>} height={imageHeight} onClick={() => navigate(`photos/${image.id}`)}>
       {isVisible && (
         <Container>
-          <Image
-            $imageWidth={imageWidth}
-            src={`${image.urls.raw}&w=416`}
-            alt={image.description || image.alt_description}
-          />
+          <Image $imageWidth={imageWidth} src={`${image.urls.raw}&w=416`} alt={image.description || image.alt_description} />
         </Container>
       )}
 
       <ErrorBoundary>
-        {image.blur_hash !== null && (
-          <BlurHashStyled
-            $imageWidth={imageWidth}
-            hash={image.blur_hash}
-            height={imageHeight}
-            resolutionX={32}
-            resolutionY={32}
-            punch={1}
-          />
-        )}
+        {image.blur_hash !== null && <BlurHashStyled data-testid="blurhash" $imageWidth={imageWidth} hash={image.blur_hash} height={imageHeight} resolutionX={32} resolutionY={32} punch={1} />}
       </ErrorBoundary>
     </CardWrapper>
   );

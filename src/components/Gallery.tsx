@@ -17,20 +17,11 @@ interface GalleryProps {
 }
 
 const Gallery: FC<GalleryProps> = ({
-  photosArray,
-  rowGap,
-  columnGap,
-  minColumns,
-  screenWidths,
-  imageWidths,
+  photosArray, rowGap, columnGap, minColumns, screenWidths, imageWidths,
 }) => {
   // Ensure the blurhash gets the same width/height as the image
-  const [maxImageWidth, setMaxImageWidth] = useState(
-    imageWidths[imageWidths.length - 1],
-  );
-  const [currentImageWidth, setCurrentImageWidth] = useState(
-    imageWidths[imageWidths.length - 1],
-  );
+  const [maxImageWidth, setMaxImageWidth] = useState(imageWidths[imageWidths.length - 1]);
+  const [currentImageWidth, setCurrentImageWidth] = useState(imageWidths[imageWidths.length - 1]);
   const [columns, setColumns] = useState<IImage[][]>([[]]);
   const [numberOfColumns, setNumberOfColumns] = useState(imageWidths.length - 1);
 

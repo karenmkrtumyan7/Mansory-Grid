@@ -12,7 +12,7 @@ const LinkStyle = styled.a`
 `;
 
 const UserWrapper = styled.div`
-  ${creditsDiv}; 
+  ${creditsDiv};
   width: auto;
   padding: 10px;
 `;
@@ -43,17 +43,12 @@ const UserTag = styled.span`
   font-size: 12px;
   margin: 0;
   padding: 0;
-  
+
   &:hover {
-      opacity: 1;
+    opacity: 1;
   }
 `;
 
 export {
-  LinkStyle,
-  UserWrapper,
-  UserNameWrapper,
-  Avatar,
-  UserName,
-  UserTag,
+  LinkStyle, UserWrapper, UserNameWrapper, Avatar, UserName, UserTag,
 };

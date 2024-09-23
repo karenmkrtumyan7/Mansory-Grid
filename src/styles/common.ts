@@ -30,8 +30,8 @@ const Grid = styled.div`
 `;
 
 interface SpaceProps {
-  height? : number;
-  $minHeight? : number;
+  height?: number;
+  $minHeight?: number;
 }
 
 const Space = styled.div<SpaceProps>`
@@ -40,9 +40,5 @@ const Space = styled.div<SpaceProps>`
 `;
 
 export {
-  Center,
-  ErrorStyled,
-  Container,
-  Grid,
-  Space,
+  Center, ErrorStyled, Container, Grid, Space,
 };

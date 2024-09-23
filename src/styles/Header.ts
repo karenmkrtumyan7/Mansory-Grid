@@ -12,14 +12,16 @@ const HeaderWrapper = styled.div`
   align-items: center;
   padding: 10px;
   z-index: 11;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08), 0 0 1px rgba(1, 0, 0, 0.1);
+  box-shadow:
+    0 4px 12px rgba(0, 0, 0, 0.08),
+    0 0 1px rgba(1, 0, 0, 0.1);
 `;
 
 const SearchBarDiv = styled.div`
   width: 100%;
   margin-left: 18px;
   display: flex;
-  justify-content: center;  
+  justify-content: center;
 `;
 
 const SearchBarForm = styled.form`
@@ -72,9 +74,5 @@ const SearchInput = styled.input`
 `;
 
 export {
-  HeaderWrapper,
-  SearchBarDiv,
-  SearchBarForm,
-  SearchButton,
-  SearchInput,
+  HeaderWrapper, SearchBarDiv, SearchBarForm, SearchButton, SearchInput,
 };

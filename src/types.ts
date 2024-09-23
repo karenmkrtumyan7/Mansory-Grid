@@ -4,20 +4,20 @@ export interface IImage {
     raw: string;
     full: string;
   };
-  description?: string;
+  description?: string | null;
   alt_description?: string;
   blur_hash?: string | null;
   width: number;
   height: number;
   user: {
     profile_image: {
-      small: string
-    },
-    first_name: string,
-    last_name: string,
-    username: string,
-  }
-  created_at: string,
+      small: string;
+    };
+    first_name: string;
+    last_name: string;
+    username: string;
+  };
+  created_at: string;
 }
 
 export interface ILayoutData {

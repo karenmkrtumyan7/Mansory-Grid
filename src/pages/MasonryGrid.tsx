@@ -7,15 +7,15 @@ import { Gallery, Header } from 'components';
 import { removeDuplicateImages } from 'helpers';
 import { ErrorStyled, Space } from 'styles/common';
 import { useInfiniteScroll } from 'hooks';
+import { IImage } from 'types';
 
 const screenWidths: number[] = [data.SCREEN_WIDTH_1COLUMN, data.SCREEN_WIDTH_2COLUMNS, data.SCREEN_WIDTH_3COLUMNS];
-
 const imageWidths: number[] = [data.IMAGE_WIDTH_1COLUMN, data.IMAGE_WIDTH_2COLUMNS, data.IMAGE_WIDTH_3COLUMNS];
 
 const MasonryGrid = () => {
   const fetching = useRef(true);
 
-  const [photosArray, setPhotosArray] = useState<any[]>([]);
+  const [photosArray, setPhotosArray] = useState<IImage[]>([]);
   const [page, setPage] = useState<number>(1);
   const [searchText, setSearchText] = useState<string>('');
   const [errorMessage, setErrorMessage] = useState<string | null>(null);
@@ -24,7 +24,7 @@ const MasonryGrid = () => {
 
   useEffect(() => {
     const getDataPhotos = async (text: string) => {
-      const nextPhotos: any[] = text === '' ? await getPhotos(page) : await getSearch(page, text);
+      const nextPhotos: IImage[] = text === '' ? await getPhotos(page) : await getSearch(page, text);
 
       if (page === 1) {
         if (nextPhotos && nextPhotos.length === 0) {

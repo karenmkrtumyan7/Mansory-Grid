@@ -23,7 +23,7 @@ const PhotoDetails: FC = () => {
           setImage(data);
         })
         .catch(() => {
-          navigate('/404');
+          navigate('/error');
         });
     }
   }, [id, navigate]);

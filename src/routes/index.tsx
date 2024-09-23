@@ -18,7 +18,7 @@ export const allRoutes = createBrowserRouter([
   {
     path: '*',
     async lazy() {
-      const Component = await import('pages/NotFound');
+      const Component = await import('pages/ErrorPage');
       return { Component: Component.default };
     },
   },

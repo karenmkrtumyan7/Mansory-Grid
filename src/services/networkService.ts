@@ -1,6 +1,7 @@
 import axios from 'axios';
 import AppConstants from 'constants/AppConstants';
 import { textToQuery } from 'helpers';
+import { IImage } from 'types';
 
 const accessKey = process.env.REACT_APP_ACCESS_KEY as string;
 const endpoint = process.env.REACT_APP_API_URL as string;
@@ -16,7 +17,7 @@ const NetworkService = axios.create({
   },
 });
 
-const getPhotos = async (page: number): Promise<any[]> => {
+const getPhotos = async (page: number): Promise<IImage[]> => {
   try {
     const response = await NetworkService.get(`/${Photos}`, {
       params: {
@@ -26,11 +27,11 @@ const getPhotos = async (page: number): Promise<any[]> => {
     });
     return response.data;
   } catch (err) {
-    return [];
+    return Promise.reject();
   }
 };
 
-const getSearch = async (page: number, query: string, order: string = 'relevant'): Promise<any[]> => {
+const getSearch = async (page: number, query: string, order: string = 'relevant'): Promise<IImage[]> => {
   try {
     const response = await NetworkService.get(`/${Search}/${Photos}`, {
       params: {
@@ -42,16 +43,16 @@ const getSearch = async (page: number, query: string, order: string = 'relevant'
     });
     return response.data.results;
   } catch (err) {
-    return [];
+    return Promise.reject();
   }
 };
 
-const getPhoto = async (photoId: string): Promise<any> => {
+const getPhoto = async (photoId: string): Promise<IImage> => {
   try {
     const response = await NetworkService.get(`/${Photos}/${photoId}`);
     return response.data;
   } catch (err) {
-    return {};
+    return Promise.reject();
   }
 };
 

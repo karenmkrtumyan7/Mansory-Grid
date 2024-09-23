@@ -1,6 +1,6 @@
 import { IImage } from 'types';
 
-export const removeDuplicateImages = (prevPhotos: { id: string }[], nextPhotos?: { id: string }[]): { id: string }[] => {
+export const removeDuplicateImages = (prevPhotos: IImage[], nextPhotos?: IImage[]): IImage[] => {
   if (!nextPhotos) {
     return [];
   }

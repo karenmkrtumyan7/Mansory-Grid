@@ -1,12 +1,12 @@
 import { FC } from 'react';
 import { Center } from 'styles/common';
 
-const NotFound: FC = () => (
+const ErrorPage: FC = () => (
   <Center>
     <div>
-      <h2>Page Not Found</h2>
+      <h2>Something Went Wrong</h2>
     </div>
   </Center>
 );
 
-export default NotFound;
+export default ErrorPage;
